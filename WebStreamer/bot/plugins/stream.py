@@ -1,6 +1,3 @@
-# This file is a part of TG-FileStreamBot
-# Coding : Jyothis Jayanth [@EverythingSuckz]
-
 import logging
 from pyrogram import filters, errors
 from WebStreamer.vars import Var
@@ -11,7 +8,7 @@ from pyrogram.enums.parse_mode import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 links = []
-@StreamBot.on_message(filters.private & filters.command("/multi"))
+@StreamBot.on_message(filters.private & filters.command("multi"))
 async def multi_files(bot, msg):
     try : 
       reciv = await StreamBot.ask(msg.chat.id,"hit /multi when you finish sending your files")
